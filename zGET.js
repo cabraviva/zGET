@@ -1,25 +1,7 @@
-// var zGET = function (url, work=function(a){console.log(a)}, options={}) {
-//
-//   var listener = function () {
-//     var result = `${this.responseText}`;
-//     work(result);
-//   }
-//
-//
-//   var request = new XMLHttpRequest();
-//
-//   request.addEventListener("load", listener);
-//   request.open(options.method || 'GET', url);
-//   request.send();
-//
-// }
-
 var zGET = function (url, options = {}, worker = function () {}) {
   var request = new window.XMLHttpRequest()
 
-  // request.addEventListener("load", listener);
-
-  var p = new Promise(function (resolve, reject) {
+  var p = new (window.Promise)(function (resolve, reject) {
     request.addEventListener('load', function () {
       resolve(
         this.responseText
