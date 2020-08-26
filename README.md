@@ -12,6 +12,15 @@ Add this to your html:
 ```
 
 or
+### jsdelivr
+**Use the latest version with jsdelivr:**
+
+Add this to your html:
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/greencoder001/zGET@latest/main.js"></script>
+```
+
+or
 ### Local:
 **Use a specific version:**
 
