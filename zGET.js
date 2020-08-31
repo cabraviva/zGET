@@ -15,11 +15,14 @@ var zGET = function (url, options = {}, worker = function () {}) {
     })
   })
 
-  if (options.method === 'POST' && options.header !== 'no-header') {
-    request.setRequestHeader('Content-type', options.type || 'application/x-www-form-urlencoded')
+  if (options.header) {
+    request.setRequestHeader(...options.header)
   }
 
   request.open(options.method || 'GET', url, true, options.username, options.password)
+  if (options.beforeSend) {
+    options.beforeSend(request)
+  }
   request.send(options.POST)
 
   return p
