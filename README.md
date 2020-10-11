@@ -1,7 +1,7 @@
 # zGET
 A cool Javascript framework to make XMLHttpRequest easier to use!
 
-## Install
+## Install:
 
 ### GitHub
 **Use the latest version:**
@@ -27,4 +27,16 @@ or
 Download the latest release, unpack it and add this html:
 ```html
 <script type="text/javascript" src="/your/path/to/dist/bundle.js"></script>
+```
+
+## Examples:
+### 01 - Get stargazers of a github repository
+```js
+zGET({
+  url: 'https://api.github.com/repos/greencoder001/zGET/stargazers'
+}).then(value => {
+  JSON.parse(value).forEach((stargazer) => {
+    console.log('Stargazer:', stargazer.login)
+  })
+})
 ```

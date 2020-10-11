@@ -9,7 +9,12 @@ class Operation {
     this.state = this.states[0]
   }
 
-  dispatch (e, value = null) {
+  then (callback) {
+    this.on('success', callback)
+    this.on('fail', callback)
+  }
+
+  dispatch (e, ...values) {
     if (e === 'success') {
       this.state = this.states[1]
     } else if (e === 'fail') {
@@ -17,16 +22,16 @@ class Operation {
     }
 
     for (const handler of this.handlers[e] || []) {
-      handler(value, e)
+      handler(...values)
     }
   }
 
-  fail (err = new Error('Operation failed')) {
-    this.dispatch('fail', err)
+  fail (...values) {
+    this.dispatch('fail', ...values)
   }
 
-  success (value = '') {
-    this.dispatch('success', value)
+  success (...values) {
+    this.dispatch('success', ...values)
   }
 
   on (e, handler) {
@@ -40,6 +45,7 @@ class Operation {
 
 const waitFor = (operation, callback) => {
   operation.on('success', callback)
+  operation.on('fail', callback)
 }
 
 const isSuccess = operation => {
