@@ -8,7 +8,7 @@ A cool Javascript framework to make XMLHttpRequest easier to use!
 
 Add this to your html:
 ```html
-<script type="text/javascript" src="https://greencoder001.github.io/zGET/main.js"></script>
+<script type="text/javascript" src="https://greencoder001.github.io/zGET/dist/bundle.js"></script>
 ```
 
 or
@@ -17,7 +17,7 @@ or
 
 Add this to your html:
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/greencoder001/zGET@latest/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/greencoder001/zGET@latest/dist/bundle.js"></script>
 ```
 
 or
@@ -26,5 +26,5 @@ or
 
 Download the latest release, unpack it and add this html:
 ```html
-<script type="text/javascript" src="/your/path/to/zGET.min.js"></script>
+<script type="text/javascript" src="/your/path/to/dist/bundle.js"></script>
 ```

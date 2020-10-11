@@ -105,7 +105,7 @@ var zGET = function zGET() {
   /* EVENTS START */
 
   XHR.addEventListener('load', function () {
-    operation.success([_this.responseText, _this.status]);
+    operation.success(_this.responseText, _this.status);
   });
   XHR.addEventListener('error', function () {
     operation.fail(new Error('zGET can\'t load website: ' + url));

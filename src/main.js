@@ -67,7 +67,7 @@ const zGET = (options = {}) => {
 
   /* EVENTS START */
   XHR.addEventListener('load', () => {
-    operation.success([this.responseText, this.status])
+    operation.success(this.responseText, this.status)
   })
 
   XHR.addEventListener('error', () => {
