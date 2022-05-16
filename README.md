@@ -1,3 +1,5 @@
+[![](https://data.jsdelivr.com/v1/package/gh/greencoder001/zget/badge)](https://www.jsdelivr.com/package/gh/greencoder001/zget)
+
 # zGET
 A cool Javascript framework to make XMLHttpRequest easier to use!
 
