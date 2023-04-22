@@ -1,5 +1,7 @@
 [![](https://data.jsdelivr.com/v1/package/gh/greencoder001/zget/badge)](https://www.jsdelivr.com/package/gh/greencoder001/zget)
 
+**NOTE: zGET is deprecated, as it was replaced by [knorry](https://github.com/greencoder001/knorry). You can still use zGET, but it won't receive any updates**
+
 # zGET
 A cool Javascript framework to make XMLHttpRequest easier to use!
 
